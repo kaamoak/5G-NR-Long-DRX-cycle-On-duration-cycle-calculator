@@ -1,0 +1,9 @@
+Drx_StartOffset = input("Enter the value for drx-StartOffset  ")
+Long_drxCycle = input("Enter the value for drx-LongCycle  ")
+
+for frame in range (0,1024):
+    for slot in range (0,10):
+        On_duration = (frame*10)+slot
+        if On_duration % int(Long_drxCycle) == int(Drx_StartOffset):
+            print(frame, slot)
+
